@@ -1,7 +1,7 @@
 while true do 
     if fs.exists("startup.lua") then 
-        print("Would you like to Update the Current Startup File")
-        local Ans=io.read()
+        print("Would you like to update the current startup files?)
+        local Ans = io.read()
         if(Ans=="Yes" or Ans=="yes" or Ans=="y" or Ans=="Y") then
             local soft = fs.open("startup.lua", "r")
             local data = soft.readLine()
@@ -13,9 +13,6 @@ while true do
             elseif data == "--Slot" then
                 fs.delete("startup.lua")
                 shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/Slot.lua startup.lua")
-            elseif data == "--tic" then
-                fs.delete("startup.lua")
-                shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ticTackToe.lua startup.lua")
             elseif data == "--black" then
                 fs.delete("startup.lua")
                 shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/BlackJack.lua startup.lua")
@@ -29,9 +26,6 @@ while true do
             elseif B == "ATM" then
                 shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ATM.lua startup.lua")
                 break
-            elseif B == "tic" then
-                shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ticTackToe.lua startup.lua")
-                break
             elseif B == "black jack" then
                 shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/BlackJack.lua startup.lua")
                 break
@@ -42,16 +36,13 @@ while true do
             print("Invalid Input")
         end
     else
-        print("Type Slot, ATM, tic, black jack to install game")
+        print("Type Slot, ATM, black jack to install game")
         local B=io.read()
         if B == "Slot" then
             shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/Slot.lua startup.lua")
             break
         elseif B == "ATM" then
             shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ATM.lua startup.lua")
-            break
-        elseif B == "tic" then
-            shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/ticTackToe.lua startup.lua")
             break
         elseif B == "black jack" then
             shell.run("wget https://raw.githubusercontent.com/minecartchris/CC-Casnio/refs/heads/main/prog/BlackJack.lua startup.lua")
