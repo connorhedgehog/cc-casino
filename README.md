@@ -1,2 +1,2 @@
 # cc-casino
-A rewrite of an insanely programmed ComputerCraft casino set up
+A rewrite of someone's ComputerCraft-based casino system
