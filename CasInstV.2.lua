@@ -1,8 +1,8 @@
 while true do 
     if fs.exists("startup.lua") then 
         print("Would you like to update the current startup files?)
-        local Ans = io.read()
-        if(Ans=="Yes" or Ans=="yes" or Ans=="y" or Ans=="Y") then
+        local answer = io.read()
+        if(answer =="Yes" or Ans=="yes" or Ans=="y" or Ans=="Y") then
             local soft = fs.open("startup.lua", "r")
             local data = soft.readLine()
             soft.close()
