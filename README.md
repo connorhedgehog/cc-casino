@@ -1,1 +1,2 @@
-This a casnio program writen bu meyself and some friends its simple to understand so thanks for reading
+# cc-casino
+A rewrite of an insanely programmed ComputerCraft casino set up
